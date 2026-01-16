@@ -1,0 +1,313 @@
+{
+  "name": "Lenny's Podcast Wiki Schema",
+  "version": "2.0",
+  "created": "2025-01-14",
+  "source_episodes": 303,
+
+  "domains": {
+    "product": {
+      "name": "Product Management",
+      "description": "The craft of building products",
+      "icon": "package"
+    },
+    "growth": {
+      "name": "Growth",
+      "description": "Acquisition, activation, retention, virality",
+      "icon": "trending-up"
+    },
+    "metrics": {
+      "name": "Metrics & Analytics",
+      "description": "Measuring what matters",
+      "icon": "bar-chart"
+    },
+    "monetization": {
+      "name": "Monetization",
+      "description": "Pricing, revenue, unit economics",
+      "icon": "dollar-sign"
+    },
+    "leadership": {
+      "name": "Leadership & Org",
+      "description": "Managing teams, culture, hiring",
+      "icon": "users"
+    },
+    "strategy": {
+      "name": "Strategy",
+      "description": "Positioning, competitive advantage, GTM",
+      "icon": "target"
+    },
+    "career": {
+      "name": "Career",
+      "description": "Growth, transitions, work-life",
+      "icon": "briefcase"
+    }
+  },
+
+  "wiki_topics": {
+    "growth_motions": {
+      "domain": "growth",
+      "topics": [
+        {"name": "Product-Led Growth (PLG)", "mentions": 388, "aliases": ["PLG", "product led growth", "self-serve growth"]},
+        {"name": "Sales-Led Growth", "mentions": 77, "aliases": ["sales-led", "enterprise sales"]},
+        {"name": "Growth Loops", "mentions": 58, "aliases": ["viral loops", "growth flywheel"]},
+        {"name": "Network Effects", "mentions": 160, "aliases": ["network effect", "virality"]},
+        {"name": "Word of Mouth", "mentions": 173, "aliases": ["WOM", "organic growth"]},
+        {"name": "Referral Programs", "mentions": 24, "aliases": ["referral", "invite programs"]},
+        {"name": "Waitlist Strategy", "mentions": 18, "aliases": ["waitlist", "early access"]},
+        {"name": "Land and Expand", "mentions": 7, "aliases": ["expansion revenue"]}
+      ]
+    },
+
+    "activation_retention": {
+      "domain": "growth",
+      "topics": [
+        {"name": "Aha Moment", "mentions": 81, "aliases": ["activation moment", "magic moment"]},
+        {"name": "Time to Value", "mentions": 25, "aliases": ["TTV", "onboarding speed"]},
+        {"name": "Activation Rate", "mentions": 13, "aliases": ["activation"]},
+        {"name": "Retention Rate", "mentions": 19, "aliases": ["retention"]},
+        {"name": "Churn Rate", "mentions": 5, "aliases": ["churn"]},
+        {"name": "Onboarding", "mentions": 118, "aliases": ["user onboarding", "new user experience"]}
+      ]
+    },
+
+    "metrics_kpis": {
+      "domain": "metrics",
+      "topics": [
+        {"name": "North Star Metric", "mentions": 210, "aliases": ["north star", "NSM"]},
+        {"name": "OKRs", "mentions": 553, "aliases": ["OKR", "objectives and key results"]},
+        {"name": "KPIs", "mentions": 147, "aliases": ["KPI", "key performance indicators"]},
+        {"name": "Leading Indicators", "mentions": 32, "aliases": ["leading indicator", "input metrics"]},
+        {"name": "Lagging Indicators", "mentions": 2, "aliases": ["lagging indicator", "output metrics"]},
+        {"name": "Guardrail Metrics", "mentions": 7, "aliases": ["guardrail metric", "counter metrics"]},
+        {"name": "Proxy Metrics", "mentions": 7, "aliases": ["proxy metric"]}
+      ]
+    },
+
+    "financial_metrics": {
+      "domain": "monetization",
+      "topics": [
+        {"name": "ARR", "mentions": 187, "aliases": ["annual recurring revenue"]},
+        {"name": "MRR", "mentions": 1, "aliases": ["monthly recurring revenue"]},
+        {"name": "LTV", "mentions": 60, "aliases": ["lifetime value", "CLV"]},
+        {"name": "CAC", "mentions": 147, "aliases": ["customer acquisition cost"]},
+        {"name": "Payback Period", "mentions": 18, "aliases": ["CAC payback"]},
+        {"name": "Unit Economics", "mentions": 39, "aliases": ["unit econ"]},
+        {"name": "Gross Margin", "mentions": 25, "aliases": ["contribution margin"]},
+        {"name": "Burn Rate", "mentions": 12, "aliases": ["runway"]}
+      ]
+    },
+
+    "engagement_metrics": {
+      "domain": "metrics",
+      "topics": [
+        {"name": "DAU/MAU", "mentions": 161, "aliases": ["DAU", "MAU", "WAU", "daily active users"]},
+        {"name": "NPS", "mentions": 83, "aliases": ["net promoter score"]},
+        {"name": "CSAT", "mentions": 24, "aliases": ["customer satisfaction"]},
+        {"name": "Conversion Rate", "mentions": 129, "aliases": ["conversion"]}
+      ]
+    },
+
+    "business_models": {
+      "domain": "strategy",
+      "topics": [
+        {"name": "Marketplace", "mentions": 915, "aliases": ["two-sided marketplace", "two sided"]},
+        {"name": "SaaS", "mentions": 512, "aliases": ["software as a service"]},
+        {"name": "Freemium", "mentions": 107, "aliases": ["free tier", "free plan"]},
+        {"name": "Enterprise", "mentions": 839, "aliases": ["enterprise sales", "B2B enterprise"]},
+        {"name": "Consumer", "mentions": 714, "aliases": ["B2C", "consumer apps"]},
+        {"name": "B2B", "mentions": 598, "aliases": ["business to business"]},
+        {"name": "SMB", "mentions": 57, "aliases": ["small business", "mid-market"]}
+      ]
+    },
+
+    "pm_craft": {
+      "domain": "product",
+      "topics": [
+        {"name": "Roadmapping", "mentions": 193, "aliases": ["roadmap", "product roadmap"]},
+        {"name": "Prioritization", "mentions": 76, "aliases": ["prioritize", "backlog"]},
+        {"name": "Product-Market Fit", "mentions": 719, "aliases": ["PMF", "market fit"]},
+        {"name": "MVP", "mentions": 145, "aliases": ["minimum viable product", "prototype"]},
+        {"name": "User Research", "mentions": 77, "aliases": ["customer research", "discovery"]},
+        {"name": "A/B Testing", "mentions": 237, "aliases": ["experimentation", "experiment"]},
+        {"name": "Feature Flags", "mentions": 10, "aliases": ["feature flag", "toggles"]},
+        {"name": "Beta Programs", "mentions": 142, "aliases": ["beta", "early access", "alpha"]},
+        {"name": "Dogfooding", "mentions": 59, "aliases": ["dogfood", "eating your own"]}
+      ]
+    },
+
+    "pm_roles": {
+      "domain": "product",
+      "topics": [
+        {"name": "Growth PM", "mentions": 55, "aliases": ["growth product manager"]},
+        {"name": "Platform PM", "mentions": 12, "aliases": ["platform product manager"]},
+        {"name": "Technical PM", "mentions": 8, "aliases": ["technical product manager", "TPM"]},
+        {"name": "Zero to One PM", "mentions": 167, "aliases": ["0 to 1", "zero to one", "founding PM"]},
+        {"name": "First PM", "mentions": 57, "aliases": ["first product manager", "solo PM"]},
+        {"name": "Head of Product", "mentions": 215, "aliases": ["VP Product", "CPO"]}
+      ]
+    },
+
+    "positioning_gtm": {
+      "domain": "strategy",
+      "topics": [
+        {"name": "Positioning", "mentions": 306, "aliases": ["product positioning", "market positioning"]},
+        {"name": "Differentiation", "mentions": 124, "aliases": ["competitive differentiation"]},
+        {"name": "Category Design", "mentions": 625, "aliases": ["category", "category creation"]},
+        {"name": "ICP", "mentions": 75, "aliases": ["ideal customer profile", "target customer"]},
+        {"name": "Persona", "mentions": 1570, "aliases": ["user persona", "buyer persona"]},
+        {"name": "Competitive Moat", "mentions": 107, "aliases": ["moat", "defensibility"]},
+        {"name": "Value Proposition", "mentions": 71, "aliases": ["value prop", "USP"]}
+      ]
+    },
+
+    "go_to_market": {
+      "domain": "strategy",
+      "topics": [
+        {"name": "Product Hunt Launch", "mentions": 54, "aliases": ["Product Hunt"]},
+        {"name": "SEO", "mentions": 622, "aliases": ["search engine optimization"]},
+        {"name": "Content Marketing", "mentions": 25, "aliases": ["content strategy"]},
+        {"name": "Demand Generation", "mentions": 24, "aliases": ["demand gen", "lead gen"]},
+        {"name": "Inbound Marketing", "mentions": 70, "aliases": ["inbound"]},
+        {"name": "Outbound Sales", "mentions": 63, "aliases": ["outbound"]}
+      ]
+    },
+
+    "hiring_talent": {
+      "domain": "leadership",
+      "topics": [
+        {"name": "Hiring Process", "mentions": 196, "aliases": ["hiring", "recruiting"]},
+        {"name": "Bar Raiser", "mentions": 18, "aliases": ["bar raiser interview"]},
+        {"name": "Reference Checks", "mentions": 28, "aliases": ["reference check", "backchannel"]},
+        {"name": "Structured Interviews", "mentions": 2, "aliases": ["behavioral interview"]},
+        {"name": "Culture Fit", "mentions": 3, "aliases": ["values fit"]},
+        {"name": "Hiring Manager", "mentions": 73, "aliases": ["hiring managers"]}
+      ]
+    },
+
+    "compensation": {
+      "domain": "career",
+      "topics": [
+        {"name": "Equity Compensation", "mentions": 137, "aliases": ["equity", "stock options"]},
+        {"name": "Vesting", "mentions": 366, "aliases": ["vesting schedule", "cliff"]},
+        {"name": "RSUs", "mentions": 1663, "aliases": ["RSU", "restricted stock"]},
+        {"name": "Compensation", "mentions": 79, "aliases": ["comp", "salary"]},
+        {"name": "Offer Negotiation", "mentions": 2, "aliases": ["negotiation", "counteroffer"]}
+      ]
+    },
+
+    "career_growth": {
+      "domain": "career",
+      "topics": [
+        {"name": "Career Ladder", "mentions": 23, "aliases": ["leveling", "career levels"]},
+        {"name": "Promotion", "mentions": 192, "aliases": ["getting promoted", "promo packet"]},
+        {"name": "IC vs Manager Track", "mentions": 4, "aliases": ["IC track", "manager track"]},
+        {"name": "Performance Reviews", "mentions": 83, "aliases": ["perf review", "performance review"]},
+        {"name": "Career Growth", "mentions": 40, "aliases": ["career development"]}
+      ]
+    },
+
+    "work_life": {
+      "domain": "career",
+      "topics": [
+        {"name": "Burnout", "mentions": 72, "aliases": ["burning out", "exhaustion"]},
+        {"name": "Work-Life Balance", "mentions": 27, "aliases": ["work life balance"]},
+        {"name": "Imposter Syndrome", "mentions": 58, "aliases": ["imposter"]},
+        {"name": "Remote Work", "mentions": 46, "aliases": ["remote", "distributed"]},
+        {"name": "Deep Work", "mentions": 34, "aliases": ["focus time", "maker time"]}
+      ]
+    },
+
+    "management_practices": {
+      "domain": "leadership",
+      "topics": [
+        {"name": "One-on-Ones", "mentions": 6884, "aliases": ["1:1", "1:1s", "one on one"]},
+        {"name": "Skip Levels", "mentions": 4, "aliases": ["skip level meeting"]},
+        {"name": "All-Hands", "mentions": 75, "aliases": ["all hands", "town hall"]},
+        {"name": "Feedback", "mentions": 1845, "aliases": ["giving feedback", "receiving feedback"]},
+        {"name": "Difficult Conversations", "mentions": 44, "aliases": ["hard conversations"]},
+        {"name": "Delegation", "mentions": 12, "aliases": ["delegating"]},
+        {"name": "Decision Making", "mentions": 206, "aliases": ["decision-making", "decisions"]}
+      ]
+    },
+
+    "org_design": {
+      "domain": "leadership",
+      "topics": [
+        {"name": "Cross-Functional Teams", "mentions": 121, "aliases": ["cross functional", "x-functional"]},
+        {"name": "Tiger Teams", "mentions": 8, "aliases": ["tiger team", "task force"]},
+        {"name": "Two-Pizza Teams", "mentions": 5, "aliases": ["two pizza rule"]},
+        {"name": "Psychological Safety", "mentions": 26, "aliases": ["psych safety"]},
+        {"name": "Autonomy", "mentions": 116, "aliases": ["empowerment"]},
+        {"name": "Accountability", "mentions": 100, "aliases": ["ownership"]}
+      ]
+    },
+
+    "culture_values": {
+      "domain": "leadership",
+      "topics": [
+        {"name": "Company Culture", "mentions": 178, "aliases": ["culture", "values"]},
+        {"name": "Trust", "mentions": 1337, "aliases": ["building trust"]},
+        {"name": "Transparency", "mentions": 50, "aliases": ["open communication"]}
+      ]
+    },
+
+    "processes_rituals": {
+      "domain": "product",
+      "topics": [
+        {"name": "Sprint Planning", "mentions": 317, "aliases": ["sprint", "sprints"]},
+        {"name": "Retrospectives", "mentions": 84, "aliases": ["retro", "retros"]},
+        {"name": "Product Reviews", "mentions": 104, "aliases": ["product review"]},
+        {"name": "Quarterly Planning", "mentions": 25, "aliases": ["annual planning"]},
+        {"name": "Launch Process", "mentions": 1730, "aliases": ["launching", "ship"]}
+      ]
+    },
+
+    "product_artifacts": {
+      "domain": "product",
+      "topics": [
+        {"name": "One-Pagers", "mentions": 35, "aliases": ["one pager", "1-pager"]},
+        {"name": "PRDs", "mentions": 50, "aliases": ["product requirements document"]},
+        {"name": "Strategy Docs", "mentions": 100, "aliases": ["strategy document"]}
+      ]
+    },
+
+    "startup_journey": {
+      "domain": "strategy",
+      "topics": [
+        {"name": "Founder Mode", "mentions": 74, "aliases": ["founder-led"]},
+        {"name": "Pivoting", "mentions": 352, "aliases": ["pivot", "pivots"]},
+        {"name": "Layoffs", "mentions": 70, "aliases": ["layoff", "downsizing"]},
+        {"name": "Scaling", "mentions": 500, "aliases": ["scale", "growth stage"]}
+      ]
+    }
+  },
+
+  "named_frameworks": [
+    {"name": "Jobs to Be Done", "mentions": 134, "source": "Bob Moesta, Clayton Christensen", "aliases": ["JTBD"]},
+    {"name": "DHM Model", "mentions": 10, "source": "Gibson Biddle", "description": "Delight + Hard-to-copy + Margin-enhancing"},
+    {"name": "Pre-Mortem", "mentions": 15, "source": "Shreyas Doshi", "description": "Tigers, Paper Tigers, Elephants"},
+    {"name": "Fuel vs Engine", "mentions": 5, "source": "Emily Kramer", "description": "Content/positioning vs Distribution/ops"},
+    {"name": "Sales Pitch Framework", "mentions": 20, "source": "April Dunford", "description": "Insight → Alternatives → Perfect World → Value"},
+    {"name": "Empowered Teams", "mentions": 30, "source": "Marty Cagan", "description": "Outcome vs output focused teams"},
+    {"name": "Hooked Model", "mentions": 15, "source": "Nir Eyal", "description": "Trigger → Action → Variable Reward → Investment"},
+    {"name": "Operating Principles", "mentions": 44, "source": "Claire Hughes Johnson", "description": "Personal operating system"},
+    {"name": "Curiosity Loops", "mentions": 5, "source": "Ada Chen Rekhi", "description": "Decision-making framework"},
+    {"name": "ICE Scoring", "mentions": 10, "source": "Sean Ellis", "description": "Impact × Confidence × Ease"},
+    {"name": "RICE Scoring", "mentions": 15, "source": "Intercom", "description": "Reach × Impact × Confidence / Effort"}
+  ],
+
+  "entity_types": {
+    "people": "Guests and notable people mentioned",
+    "companies": "Companies discussed or where guests worked",
+    "frameworks": "Named methodologies and mental models",
+    "concepts": "Key ideas and terminology",
+    "books": "Books recommended or written by guests",
+    "tools": "Software tools and platforms mentioned"
+  },
+
+  "stats": {
+    "total_wiki_topics": 95,
+    "total_domains": 7,
+    "named_frameworks": 11,
+    "estimated_wiki_pages": "800-1200"
+  }
+}
