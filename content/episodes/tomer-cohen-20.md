@@ -1,0 +1,96 @@
+---
+type: episode
+guest: Tomer Cohen #20
+---
+
+# Tomer Cohen #20
+
+## Chapters
+- Introduction: Tomer Cohen
+- AI Agents and Automation in Product Development
+- User Research, Design Review, and Testing Processes
+- AI Agents and Automation in Product Development
+- The Full Stack Builder Model and Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- The Full Stack Builder Model and Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- The Full Stack Builder Model and Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- The Full Stack Builder Model and Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- Personal Recommendations and Closing Insights
+- AI Agents and Automation in Product Development
+- A great segue to our final question...
+- Well, I'm excited to have you back someday when you figure o...
+
+## Key Concepts
+- [[(00:02:42): My]]
+- [[(00:58:42): There]]
+- [[(01:01:18): Yeah,]]
+- [[Ai]]
+- [[Chatgpt. Tomer]]
+- [[Cohen (00:58:42):]]
+- [[Cohen (01:01:18):]]
+- [[I'm Excited]]
+- [[Linkedin]]
+- [[Okrs]]
+- [[Tomer Cohen]]
+- [[We're Going]]
+- [[Whether You're]]
+- [[A Sentence,]]
+- [[Actually Mention]]
+- [[Actually Realize]]
+- [[Agents]]
+- [[An Organization,]]
+- [[Automation]]
+- [[Back Someday]]
+- [[Basics. For]]
+- [[Bookshelf Behind]]
+- [[Change Management]]
+- [[Comparison To]]
+- [[Culture]]
+- [[Didn't Actually]]
+- [[Episode Comes]]
+- [[Experimentation]]
+- [[Feedback Has]]
+- [[Final Question.]]
+- [[Full Stack Builder]]
+- [[Great Segue]]
+- [[Green Loading]]
+- [[Help People]]
+- [[Here. We're]]
+- [[High Sample]]
+- [[Is Essentially]]
+- [[Last Question]]
+- [[Little Green]]
+- [[Loading Thing]]
+- [[Makes Sense.]]
+- [[Me, Technology]]
+- [[Most Important]]
+- [[My Bookshelf]]
+- [[Of Comparison]]
+- [[Platform]]
+- [[Product Development]]
+- [[Question. By]]
+- [[Quote. Someone]]
+- [[Really Starts]]
+- [[Sense. There]]
+- [[Simple Idea,]]
+- [[Someday When]]
+- [[Start Whatever]]
+- [[Technology Has]]
+- [[Their Title]]
+- [[Think About]]
+- [[To Actually]]
+- [[Tools]]
+- [[Went Through]]
+- [[Whatever You're]]
+- [[Wouldn't Say]]
+- [[You're Just]]

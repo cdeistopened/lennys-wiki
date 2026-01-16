@@ -1,0 +1,178 @@
+---
+type: episode
+guest: Tristan De Montebello
+---
+
+# Tristan De Montebello
+
+## Chapters
+- Introduction: Tristan de Montebello
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- Communication, Speaking Skills, and Public Speaking
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- User Research, Design Review, and Testing Processes
+- Communication, Speaking Skills, and Public Speaking
+- (00:36:00):
+And then, there might be a slide that says "brea...
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- Trust, Security, and Risk in Product Design
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- Communication, Speaking Skills, and Public Speaking
+- Communication, Speaking Skills, and Public Speaking
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- AI Agents and Automation in Product Development
+- Practice Games and Skill-Building Exercises
+- Communication, Speaking Skills, and Public Speaking
+- AI Agents and Automation in Product Development
+
+## Key Concepts
+- [["breathe," Which]]
+- [[(00:02:56): Great.]]
+- [[(00:59:40): All]]
+- [[(01:02:18): Social-]]
+- [[(01:09:46): [inaudible]]
+- [[Accordion Method]]
+- [[Amazing. I'm]]
+- [[Awesome. That's]]
+- [[I Definitely]]
+- [[I'm Energized.]]
+- [[I'm Extremely]]
+- [[I'm Preparing]]
+- [[I'm Pumped.]]
+- [[It's Funny.]]
+- [[Just Giving]]
+- [[Lenny Rachitsky]]
+- [[Montebello (01:02:18):]]
+- [[Montebello (01:09:46):]]
+- [[Montebello (01:13:27):]]
+- [[Rachitsky (00:02:56):]]
+- [[Social- Lenny]]
+- [[Space Exploration,]]
+- [[That's Cool.]]
+- [[That's Really]]
+- [[There's Two]]
+- [[These Words]]
+- [[A Strength.]]
+- [[Accordion. So]]
+- [[Actually Control]]
+- [[Actually Demoed]]
+- [[Actually Show]]
+- [[After Doing]]
+- [[Already Gone]]
+- [[Already Leagues]]
+- [[Already Practicing,]]
+- [[An Indication]]
+- [[Arc. Amazing.]]
+- [[Awesome Example]]
+- [[Building On]]
+- [[Communication]]
+- [[Confidence]]
+- [[Content. If]]
+- [[Could Actually]]
+- [[Could Definitely]]
+- [[De Montebello]]
+- [[Definitely Felt]]
+- [[Definitely Get]]
+- [[Depends How]]
+- [[Didn't Even]]
+- [[Didn't Know]]
+- [[Different Doing]]
+- [[Down. That'd]]
+- [[Energized. I'm]]
+- [[Exciting. I'm]]
+- [[Exercise. Just]]
+- [[Extremely Guilty]]
+- [[Fact", "the]]
+- [[Familiar You]]
+- [[Feel Energized,]]
+- [[Find Myself,]]
+- [[Flow State]]
+- [[Forcing Yourself]]
+- [[French Fries,]]
+- [[Fries, Getting]]
+- [[Great. These]]
+- [[Great. Tristan]]
+- [[Had Already]]
+- [[Hard Exercise.]]
+- [[Helpful. (01:23:05):]]
+- [[Helpful. I'm]]
+- [[Here. Think]]
+- [[Integrate Are]]
+- [[Interesting Insight,]]
+- [[Is Wrong—and]]
+- [[It Might've]]
+- [[It's Different]]
+- [[It's Something]]
+- [[It. Tristan]]
+- [[Just People]]
+- [[Just Talked]]
+- [[Leagues Ahead]]
+- [[Let's Actually]]
+- [[Massage, Daydreaming,]]
+- [[Might've Changed]]
+- [[Mindset]]
+- [[Most Public]]
+- [[Myself, You]]
+- [[Next Theme.]]
+- [[Of Building]]
+- [[One Minute,]]
+- [[Other Insight]]
+- [[People Leak,]]
+- [[People What]]
+- [[Poster Right]]
+- [[Practicing, You're]]
+- [[Preparing My]]
+- [[Public Speaking]]
+- [[Question. Now]]
+- [[Really Depends]]
+- [[Really Helpful.]]
+- [[Really Interesting]]
+- [[Really Took]]
+- [[Regular Talk]]
+- [[Right Here.]]
+- [[Right, Let's]]
+- [[Says "breathe,"]]
+- [[Show People]]
+- [[Something I'm]]
+- [[Sounds Exciting.]]
+- [[Sounds Like]]
+- [[Speaking Advice]]
+- [[Story. What]]
+- [[Strength. Tristan]]
+- [[Talked About,]]
+- [[That. Before]]
+- [[That. Tristan]]
+- [[Then, There]]
+- [[There Might]]
+- [[These Exercises]]
+- [[These Games,]]
+- [[These Methods,]]
+- [[This, Great]]
+- [[Tip. Tristan]]
+- [[To Integrate]]
+- [[To Integrate,]]
+- [[Tough. Tristan]]
+- [[Up., Tristan]]
+- [[Was Awesome.]]
+- [[We're Going]]
+- [[Well Familiar]]
+- [[Words Were,]]
+- [[Workshop Of]]
+- [[Wrong—and How]]
+- [[You Actually]]
+- [[You're Already]]
+- [[Yourself Through]]
