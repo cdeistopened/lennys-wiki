@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>Product-Led Growth | Lenny's Wiki</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Lenny's Podcast Wiki"/><meta property="og:title" content="Product-Led Growth | Lenny's Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Product-Led Growth | Lenny's Wiki"/><meta name="twitter:description" content="Product-Led Growth You are deciding whether your company should let the product drive acquisition, activation, and expansion — or whether you need a sales team to do it."/><meta property="og:description" content="Product-Led Growth You are deciding whether your company should let the product drive acquisition, activation, and expansion — or whether you need a sales team to do it."/><meta property="og:image:alt" content="Product-Led Growth You are deciding whether your company should let the product drive acquisition, activation, and expansion — or whether you need a sales team to do it."/><meta property="twitter:domain" content="lennys-wiki.vercel.app"/><meta property="og:url" content="https://lennys-wiki.vercel.app/articles/product-led-growth"/><meta property="twitter:url" content="https://lennys-wiki.vercel.app/articles/product-led-growth"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Product-Led Growth You are deciding whether your company should let the product drive acquisition, activation, and expansion — or whether you need a sales team to do it."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2NoYXJsaWVkZWlzdC9EZXNrdG9wL05ldyBSb290IERvY3MvQ3JlYXRpdmUgSW50ZWxsaWdlbmNlIEFnZW5jeS93aWtpLXByb2plY3RzL2xlbm55cy13aWtpL3NpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://lennys-wiki.vercel.app/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://lennys-wiki.vercel.app/articles/product-led-growth-og-image.webp"/><meta property="og:image:url" content="https://lennys-wiki.vercel.app/articles/product-led-growth-og-image.webp"/><meta name="twitter:image" content="https://lennys-wiki.vercel.app/articles/product-led-growth-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="articles/product-led-growth"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Lenny's Podcast Wiki</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="open" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let order=[\&quot;domains\&quot;,\&quot;frameworks\&quot;,\&quot;cases\&quot;,\&quot;people\&quot;],aIdx=order.indexOf(a.slugSegment??\&quot;\&quot;),bIdx=order.indexOf(b.slugSegment??\&quot;\&quot;);return aIdx!==-1&amp;&amp;bIdx!==-1?aIdx-bIdx:aIdx!==-1?-1:bIdx!==-1?1:a.displayName.localeCompare(b.displayName)}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&amp;&amp;node.slugSegment!==\&quot;episodes\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-28"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-28" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><div id="chat-banner" class="chat-banner "><div class="chat-banner-inner"><div class="chat-banner-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="chat-banner-text"><span class="chat-banner-label">Ask the Archive</span><span class="chat-banner-desc">Chat with an AI that's studied every Lenny's Podcast episode</span></div><div class="chat-banner-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></div></div><script>
+(function() {
+  const banner = document.getElementById('chat-banner');
+  if (!banner) return;
+
+  banner.addEventListener('click', function() {
+    const toggle = document.getElementById('wiki-chat-toggle');
+    const panel = document.getElementById('wiki-chat-panel');
+    if (toggle && panel) {
+      panel.classList.add('open');
+      const input = document.getElementById('wiki-chat-input') || document.getElementById('wiki-chat-email');
+      if (input) input.focus();
+    }
+  });
+})();
+</script><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../articles/">articles</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Product Led Growth</a></div></nav><h1 class="article-title">Product-Led Growth</h1><p show-comma="true" class="content-meta"><time datetime="2026-02-05T18:58:35.706Z">Feb 05, 2026</time><span>9 min read</span></p></div></div><article class="popover-hint"><h1 id="product-led-growth">Product-Led Growth<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#product-led-growth" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>You are deciding whether your company should let the product drive acquisition, activation, and expansion — or whether you need a sales team to do it. Product-led growth (PLG) is the model where users can discover, try, adopt, and even pay for your product without talking to a human. The question is not whether PLG is better than sales-led. The question is whether your product and market support it, and if so, how to build the organizational machinery to make it work.</p>
+<h2 id="the-core-idea">The Core Idea<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-core-idea" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>PLG is not a marketing strategy. It is an organizational model in which the product itself is the primary engine of customer acquisition, conversion, and expansion. In a PLG company, the product does the work that sales, marketing, and customer success do in a traditional enterprise company — onboarding new users, demonstrating value, converting free users to paid, and expanding usage within organizations.</p>
+<p><a href="../elena-verna-20" class="internal alias" data-slug="elena-verna-20">Elena Verna</a>, who has appeared on the podcast more than nearly any other guest on this topic, frames PLG as a growth model rather than a go-to-market strategy. As she defines it: “Product-led growth is all about product’s ability to self-serve activate, self-serve engage, and convert that usage to a monetization opportunity. You bring people, you get them to an aha moment into the habit loops, and then you are able to extract value back out of them.” The distinction matters: a growth model describes the fundamental mechanics of how your business acquires and retains customers. A go-to-market strategy is a plan you execute on top of that model. You can layer sales onto PLG (and most successful PLG companies do), but the underlying growth engine is the product.</p>
+<p>The companies that have defined PLG — Notion, Figma, Slack, Dropbox, Calendly, Datadog — share a common pattern: individual users adopt the product for personal productivity, derive value before any purchasing decision is made, and then become the vector through which the product spreads to their teams and organizations.</p>
+<h2 id="when-plg-works-and-when-it-does-not">When PLG Works (and When It Does Not)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-plg-works-and-when-it-does-not" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The most common mistake is treating PLG as universally superior. It is not. PLG works under specific conditions, and forcing it where those conditions are absent produces a worse outcome than sales-led growth.</p>
+<p><strong>PLG is likely to work when:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Condition</th><th>Why It Matters</th><th>Example</th></tr></thead><tbody><tr><td>End users can self-provision</td><td>No IT or procurement gating adoption</td><td>Notion, Figma</td></tr><tr><td>Time to value is short</td><td>Users experience the “aha moment” in minutes to hours, not weeks</td><td>Calendly, Loom</td></tr><tr><td>ACV is low to mid (<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">0</span><span class="mord">−</span></span></span></span>25K)</td><td>Individual or team purchase, not enterprise procurement</td><td>Slack, Asana</td></tr><tr><td>The product is its own best demo</td><td>Using the product is more convincing than a sales deck</td><td>Figma, Miro</td></tr><tr><td>Individual use has clear value</td><td>The product is useful to one person, not just to teams</td><td>Notion, Dropbox</td></tr><tr><td>Network effects or sharing are natural</td><td>Using the product inherently involves inviting others</td><td>Figma (sharing files), Slack (messaging)</td></tr></tbody></table></div>
+<p><strong>PLG is unlikely to work when:</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Condition</th><th>Why It Fails</th><th>Alternative</th></tr></thead><tbody><tr><td>Product requires complex configuration</td><td>Users cannot self-serve without help</td><td>Sales-led with demo</td></tr><tr><td>Buyer is not the user</td><td>Procurement or C-suite buys; user does not choose</td><td>Enterprise sales</td></tr><tr><td>ACV exceeds $50K+</td><td>The sale is complex enough to warrant a human</td><td>Sales-led or hybrid</td></tr><tr><td>Data sensitivity blocks self-serve</td><td>Compliance, security review, or legal must approve</td><td>Sales-led</td></tr><tr><td>Value emerges only at team/org scale</td><td>Individual use has no standalone value</td><td>Sales-led with pilot</td></tr></tbody></table></div>
+<p><a href="../episodes/hila-qu" class="internal alias" data-slug="episodes/hila-qu">Hila Qu</a>, who wrote the definitive guide to adding a PLG motion, adds a data dimension: “PLG is fundamentally DLG — data-led growth. When you give away your free product, what you want to get in exchange are two things. One is a broader reach because free product spreads itself, it’s a lower barrier to entry. Two, you want to understand the usage behavior of those free users, which features they use and which features correlate with a higher conversion rate, retention rate, all of that. If you don’t have a foundation of data and understanding of how to analyze those data, you are giving away a free product for nothing.”</p>
+<h2 id="the-plg-organizational-model">The PLG Organizational Model<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-plg-organizational-model" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>One of <a href="../elena-verna-20" class="internal alias" data-slug="elena-verna-20">Elena Verna’s</a> most important contributions is describing what a PLG organization actually looks like — because it differs meaningfully from a sales-led org. As she warns: “The worst thing that you can do is to say, ‘I’m going to do product-led growth,’ or, ‘I’m going to do product-led sales and I’m going to do it in marketing.’ Recipe for disaster. You’ll be failure mode within six months because product has to take accountability over selling of the product itself.”</p>
+<h3 id="the-growth-team">The Growth Team<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-growth-team" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In a PLG company, the growth team owns the core conversion metrics: sign-up to activation, activation to retention, free to paid conversion, and expansion. This team sits at the intersection of product, engineering, and data — it is fundamentally a product-engineering team, not a marketing team.</p>
+<h3 id="the-self-serve-funnel">The Self-Serve Funnel<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-self-serve-funnel" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The PLG funnel replaces the traditional sales pipeline:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Traditional Sales</th><th>PLG Equivalent</th><th>Key Metric</th></tr></thead><tbody><tr><td>Lead generation</td><td>Sign-up / free trial start</td><td>Sign-up rate</td></tr><tr><td>Sales demo</td><td>Product onboarding + aha moment</td><td><a href="../articles/activation-rate" class="internal alias" data-slug="articles/activation-rate">Activation rate</a></td></tr><tr><td>Proposal / negotiation</td><td>Free-to-paid conversion</td><td>Conversion rate</td></tr><tr><td>Account expansion</td><td>Usage-based expansion, seat growth</td><td>Net revenue retention</td></tr><tr><td>Customer success</td><td>In-product guidance, help docs</td><td><a href="../retention" class="internal alias" data-slug="retention">Retention</a> rate</td></tr></tbody></table></div>
+<h3 id="product-qualified-leads-pqls">Product-Qualified Leads (PQLs)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#product-qualified-leads-pqls" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>In hybrid PLG companies (PLG + sales), the concept of the Product-Qualified Lead replaces the Marketing-Qualified Lead. A PQL is a user or account whose in-product behavior signals readiness for a sales conversation — they have activated, engaged deeply, and reached the limits of the free tier. The sales team contacts PQLs rather than cold leads, resulting in dramatically higher conversion rates and shorter sales cycles.</p>
+<p><a href="../elena-verna-20" class="internal alias" data-slug="elena-verna-20">Elena Verna</a> describes the PQL model as the bridge between pure self-serve and enterprise sales. As she explains, “Self-serve monetization has a cap of about $10,000. That’s just how much we’re able to process on the credit cards before they start getting flagged and declined by the banks.” Beyond that threshold, “product-led sales converts the usage that you’ve generated via self-serve into a sales opportunity and it attaches a salesperson to close a much larger contract, which can be 15, 20, a hundred thousand dollars.” The product does the qualifying; the sales team does the closing.</p>
+<h2 id="layering-sales-onto-plg">Layering Sales onto PLG<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#layering-sales-onto-plg" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Nearly every successful PLG company eventually adds a sales motion. The question is when and how.</p>
+<p><strong>The progression typically follows this pattern:</strong></p>
+<ol>
+<li><strong>Pure self-serve</strong> — The product acquires and converts customers with zero human touch. Works for individual users and small teams.</li>
+<li><strong>Sales-assisted</strong> — A small sales team handles inbound inquiries from PQLs. They do not prospect; they respond to product-generated demand.</li>
+<li><strong>Full hybrid</strong> — A sales team actively pursues enterprise accounts while the self-serve funnel continues to serve individuals and small teams. The two motions operate simultaneously with different metrics and different teams.</li>
+</ol>
+<p><a href="../episodes/christopher-miller" class="internal alias" data-slug="episodes/christopher-miller">Chris Miller</a>, who helped build HubSpot into one of the most successful PLG businesses, describes this progression from the inside. HubSpot launched a free CRM as a strategic play, but as Miller recalls, “I don’t think that there was a fully formed perspective on what was going to happen after that. How are we actually going to get leverage and enterprise value out of this sort of big, enormous piece of free software we just put into the universe?” The answer was building a growth team that understood PLG — even before the shared vocabulary existed to call it that.</p>
+<p>The mistake companies make is adding sales too early (before PLG has established a reliable self-serve funnel) or too late (leaving enterprise revenue on the table while competitors pursue it).</p>
+<h2 id="measuring-plg">Measuring PLG<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#measuring-plg" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The metrics that matter in a PLG company differ from a sales-led company:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Metric</th><th>What It Measures</th><th>Target Benchmark</th></tr></thead><tbody><tr><td>Sign-up to activation rate</td><td>How many new users reach the “aha moment”</td><td>25-40% for B2B SaaS</td></tr><tr><td>Free-to-paid conversion</td><td>How many free users become paying customers</td><td>2-5% for freemium; 15-25% for free trial</td></tr><tr><td>Time to value</td><td>How quickly new users get value</td><td>Minutes to hours (not days)</td></tr><tr><td>Viral coefficient</td><td>How many new users each existing user brings</td><td>>0.5 for meaningful virality</td></tr><tr><td>Net revenue retention</td><td>Expansion minus churn within existing accounts</td><td>>120% for top PLG companies</td></tr></tbody></table></div>
+<h2 id="common-plg-anti-patterns">Common PLG Anti-Patterns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#common-plg-anti-patterns" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li><strong>Building PLG without a clear activation metric.</strong> If you cannot define the moment a user gets value, you cannot optimize the path to it.</li>
+<li><strong>Gating value behind the paywall too aggressively.</strong> The free tier must deliver genuine value — otherwise users have nothing to get hooked on.</li>
+<li><strong>Treating growth as a marketing function.</strong> PLG growth is a product function. The growth team needs engineers and designers, not just marketers.</li>
+<li><strong>Ignoring enterprise needs.</strong> As PLG companies grow, their largest customers need features (SSO, admin controls, compliance) that self-serve does not require. Failing to build for enterprise blocks expansion revenue.</li>
+<li><strong>Confusing virality with PLG.</strong> Virality is one growth loop that some PLG companies use. PLG is a broader organizational model. You can have PLG without virality (Superhuman) and virality without PLG (TikTok).</li>
+</ol>
+<h2 id="key-takeaway">Key Takeaway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-takeaway" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>PLG is not a strategy you choose — it is a model that either fits your product and market or does not. Check the conditions before committing.</li>
+<li>The product must deliver value before the user talks to sales. If it cannot, PLG will not work.</li>
+<li>Most successful PLG companies eventually add sales for enterprise, but the self-serve engine remains the foundation.</li>
+<li>The growth team in a PLG company is a product-engineering team, not a marketing team. Staff it accordingly.</li>
+<li>Measure activation rate, free-to-paid conversion, time to value, and net revenue retention. These are your core PLG health metrics.</li>
+</ul>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../articles/network-effects" class="internal alias" data-slug="articles/network-effects">Network Effects</a> — A common PLG growth loop</li>
+<li><a href="../articles/growth-loops" class="internal alias" data-slug="articles/growth-loops">Growth Loops</a> — The engine behind PLG acquisition</li>
+<li><a href="../articles/onboarding" class="internal alias" data-slug="articles/onboarding">Onboarding</a> — The activation experience that makes or breaks PLG</li>
+<li><a href="../articles/activation-rate" class="internal alias" data-slug="articles/activation-rate">Activation Rate</a> — The metric that predicts PLG success</li>
+<li><a href="../articles/pricing-strategy" class="internal alias" data-slug="articles/pricing-strategy">Pricing Strategy</a> — Freemium vs free trial decisions</li>
+</ul>
+<h2 id="sources">Sources<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../elena-verna-20" class="internal alias" data-slug="elena-verna-20">Elena Verna on product-led sales</a> — PLG as growth model, PQL framework, self-serve monetization cap, product accountability over pipeline</li>
+<li><a href="../episodes/christopher-miller" class="internal alias" data-slug="episodes/christopher-miller">Chris Miller on HubSpot growth</a> — Building PLG at HubSpot, free CRM to enterprise, growth team DNA</li>
+<li><a href="../elena-verna" class="internal alias" data-slug="elena-verna">Elena Verna on growth tactics that never work</a> — When to hire growth, PLG prerequisites, growth as product function</li>
+<li><a href="../episodes/hila-qu" class="internal alias" data-slug="episodes/hila-qu">Hila Qu on adding a PLG motion</a> — PLG as data-led growth, free tier strategy, PLG funnel audit</li>
+<li><a href="../episodes/shaun-clowes" class="internal alias" data-slug="episodes/shaun-clowes">Shaun Clowes on PLG at Atlassian</a> — First head of growth at Atlassian, self-serve to enterprise transition</li>
+</ul></article><hr/><div class="page-footer"><script>
+(function() {
+  const WIKI = "lennys";
+  const API_URL = "https://api-production-4224.up.railway.app";
+
+  const THINKING_PHRASES = [
+    "Consulting the archives...",
+    "Searching transcripts...",
+    "Cross-referencing sources...",
+    "Pondering the question...",
+    "Evaluating the evidence...",
+    "Synthesizing insights...",
+  ];
+
+  const styles = `
+    #wiki-chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    #wiki-chat-toggle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--secondary, #2563eb);
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    #wiki-chat-toggle:hover { transform: scale(1.05); }
+    #wiki-chat-toggle svg { width: 26px; height: 26px; }
+    #wiki-chat-panel {
+      display: none;
+      position: absolute;
+      bottom: 65px;
+      right: 0;
+      width: 360px;
+      max-height: 480px;
+      background: var(--light, white);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      flex-direction: column;
+    }
+    #wiki-chat-panel.open { display: flex; }
+    #wiki-chat-header {
+      background: var(--secondary, #2563eb);
+      color: white;
+      padding: 14px 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #wiki-chat-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    #wiki-chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px;
+      max-height: 280px;
+      background: var(--lightgray, #f9fafb);
+    }
+    .wiki-chat-message {
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      max-width: 90%;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .wiki-chat-message.user {
+      background: var(--secondary, #2563eb);
+      color: white;
+      margin-left: auto;
+    }
+    .wiki-chat-message.bot {
+      background: var(--light, white);
+      border: 1px solid var(--gray, #e5e7eb);
+      color: var(--dark, #333);
+    }
+    .wiki-chat-message.bot p { margin: 0 0 8px 0; }
+    .wiki-chat-message.bot p:last-child { margin-bottom: 0; }
+    .wiki-chat-thinking { color: var(--gray, #6b7280); font-style: italic; }
+    #wiki-chat-input-area {
+      padding: 12px;
+      border-top: 1px solid var(--gray, #e5e7eb);
+      background: var(--light, white);
+    }
+    #wiki-chat-email-gate { text-align: center; padding: 16px; }
+    #wiki-chat-email-gate input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--gray, #d1d5db);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    #wiki-chat-email-gate button, #wiki-chat-send {
+      padding: 10px 16px;
+      background: var(--secondary, #2563eb);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    #wiki-chat-email-gate button:disabled, #wiki-chat-send:disabled {
+      background: var(--gray, #9ca3af);
+      cursor: not-allowed;
+    }
+    #wiki-chat-form { display: flex; gap: 8px; }
+    #wiki-chat-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--gray, #d1d5db);
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  `;
+
+  function createWidget() {
+    const widget = document.createElement('div');
+    widget.id = 'wiki-chat-widget';
+    widget.innerHTML = `
+      <style>${styles}</style>
+      <button id="wiki-chat-toggle" aria-label="Open chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
+      <div id="wiki-chat-panel">
+        <div id="wiki-chat-header">
+          <span>Ask the Archive</span>
+          <button id="wiki-chat-close">&times;</button>
+        </div>
+        <div id="wiki-chat-messages"></div>
+        <div id="wiki-chat-input-area">
+          <div id="wiki-chat-email-gate">
+            <p style="margin-bottom:12px;color:var(--dark,#374151);">Enter your email to start chatting</p>
+            <input type="email" id="wiki-chat-email" placeholder="you@example.com" />
+            <button id="wiki-chat-email-submit" style="width:100%;" disabled>Continue</button>
+          </div>
+          <form id="wiki-chat-form" style="display:none;">
+            <input type="text" id="wiki-chat-input" placeholder="Ask a question..." />
+            <button type="submit" id="wiki-chat-send">Send</button>
+          </form>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(widget);
+    initWidget();
+  }
+
+  function initWidget() {
+    const toggle = document.getElementById('wiki-chat-toggle');
+    const panel = document.getElementById('wiki-chat-panel');
+    const closeBtn = document.getElementById('wiki-chat-close');
+    const emailGate = document.getElementById('wiki-chat-email-gate');
+    const emailInput = document.getElementById('wiki-chat-email');
+    const emailSubmit = document.getElementById('wiki-chat-email-submit');
+    const chatForm = document.getElementById('wiki-chat-form');
+    const chatInput = document.getElementById('wiki-chat-input');
+    const messages = document.getElementById('wiki-chat-messages');
+
+    let userEmail = localStorage.getItem('wiki_chat_email');
+    let isLoading = false;
+
+    if (userEmail) {
+      emailGate.style.display = 'none';
+      chatForm.style.display = 'flex';
+    }
+
+    toggle.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) {
+        (userEmail ? chatInput : emailInput).focus();
+      }
+    });
+
+    closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+    emailInput.addEventListener('input', () => {
+      emailSubmit.disabled = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+    });
+
+    emailSubmit.addEventListener('click', async () => {
+      userEmail = emailInput.value.toLowerCase();
+      localStorage.setItem('wiki_chat_email', userEmail);
+      try {
+        await fetch(API_URL + '/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: userEmail }),
+        });
+      } catch (e) {}
+      emailGate.style.display = 'none';
+      chatForm.style.display = 'flex';
+      chatInput.focus();
+      addMessage('bot', "Hi! Ask me anything about the archive.");
+    });
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const query = chatInput.value.trim();
+      if (!query || isLoading) return;
+      addMessage('user', query);
+      chatInput.value = '';
+      isLoading = true;
+      let phraseIdx = 0;
+      const thinkingMsg = addMessage('bot', THINKING_PHRASES[0], 'wiki-chat-thinking');
+      const interval = setInterval(() => {
+        phraseIdx = (phraseIdx + 1) % THINKING_PHRASES.length;
+        thinkingMsg.textContent = THINKING_PHRASES[phraseIdx];
+      }, 2000);
+      try {
+        const res = await fetch(API_URL + '/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-User-Email': userEmail },
+          body: JSON.stringify({ wiki: WIKI, query, limit: 8 }),
+        });
+        const data = await res.json();
+        thinkingMsg.remove();
+        if (res.ok) {
+          let html = formatMd(data.answer);
+          if (data.sources?.length) {
+            html += '<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--gray,#e5e7eb);font-size:11px;color:var(--gray,#6b7280);"><strong>Sources:</strong> ' +
+              data.sources.slice(0,3).map(s => s.title).join(', ') + '</div>';
+          }
+          addMessage('bot', html, null, true);
+        } else {
+          addMessage('bot', 'Error: ' + (data.detail || 'Request failed'));
+        }
+      } catch (err) {
+        thinkingMsg.remove();
+        addMessage('bot', 'Error: ' + err.message);
+      } finally {
+        clearInterval(interval);
+        isLoading = false;
+      }
+    });
+
+    function addMessage(type, content, extraClass, isHtml) {
+      const msg = document.createElement('div');
+      msg.className = 'wiki-chat-message ' + type + (extraClass ? ' ' + extraClass : '');
+      if (isHtml) msg.innerHTML = content;
+      else msg.textContent = content;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+      return msg;
+    }
+
+    function formatMd(text) {
+      return text
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^/, '<p>').replace(/$/, '</p>');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createWidget);
+  } else {
+    createWidget();
+  }
+})();
+</script></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-20" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#product-led-growth" data-for="product-led-growth">Product-Led Growth</a></li><li class="depth-1"><a href="#the-core-idea" data-for="the-core-idea">The Core Idea</a></li><li class="depth-1"><a href="#when-plg-works-and-when-it-does-not" data-for="when-plg-works-and-when-it-does-not">When PLG Works (and When It Does Not)</a></li><li class="depth-1"><a href="#the-plg-organizational-model" data-for="the-plg-organizational-model">The PLG Organizational Model</a></li><li class="depth-2"><a href="#the-growth-team" data-for="the-growth-team">The Growth Team</a></li><li class="depth-2"><a href="#the-self-serve-funnel" data-for="the-self-serve-funnel">The Self-Serve Funnel</a></li><li class="depth-2"><a href="#product-qualified-leads-pqls" data-for="product-qualified-leads-pqls">Product-Qualified Leads (PQLs)</a></li><li class="depth-1"><a href="#layering-sales-onto-plg" data-for="layering-sales-onto-plg">Layering Sales onto PLG</a></li><li class="depth-1"><a href="#measuring-plg" data-for="measuring-plg">Measuring PLG</a></li><li class="depth-1"><a href="#common-plg-anti-patterns" data-for="common-plg-anti-patterns">Common PLG Anti-Patterns</a></li><li class="depth-1"><a href="#key-takeaway" data-for="key-takeaway">Key Takeaway</a></li><li class="depth-1"><a href="#related" data-for="related">Related</a></li><li class="depth-1"><a href="#sources" data-for="sources">Sources</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../articles/activation-rate" class="internal">Activation Rate</a></li><li><a href="../articles/casey-winters" class="internal">Casey Winters</a></li><li><a href="../articles/feature-launches" class="internal">Feature Launches</a></li><li><a href="../articles/go-to-market" class="internal">Go-to-Market</a></li><li><a href="../articles/growth-loops" class="internal">Growth Loops</a></li><li><a href="../articles/network-effects" class="internal">Network Effects</a></li><li><a href="../articles/onboarding" class="internal">Onboarding</a></li><li><a href="../articles/pricing-strategy" class="internal">Pricing Strategy</a></li><li><a href="../articles/word-of-mouth" class="internal">Word of Mouth</a></li><li><a href="../episodes/melissa-tan" class="internal">melissa-tan</a></li><li><a href="../episodes/merci-grace" class="internal">merci-grace</a></li><li><a href="../" class="internal">Lenny's Podcast Wiki</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://www.lennysnewsletter.com">Lenny's Newsletter</a></li><li><a href="https://www.youtube.com/@LennysPodcast">YouTube</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>

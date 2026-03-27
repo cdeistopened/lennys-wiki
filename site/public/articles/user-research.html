@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head><title>User Research | Lenny's Wiki</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&amp;family=Inter:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Lenny's Podcast Wiki"/><meta property="og:title" content="User Research | Lenny's Wiki"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="User Research | Lenny's Wiki"/><meta name="twitter:description" content="User Research You are about to make a product decision — a new feature, a redesign, a pricing change — and you realize you do not actually know what your users think, feel, or do."/><meta property="og:description" content="User Research You are about to make a product decision — a new feature, a redesign, a pricing change — and you realize you do not actually know what your users think, feel, or do."/><meta property="og:image:alt" content="User Research You are about to make a product decision — a new feature, a redesign, a pricing change — and you realize you do not actually know what your users think, feel, or do."/><meta property="twitter:domain" content="lennys-wiki.vercel.app"/><meta property="og:url" content="https://lennys-wiki.vercel.app/articles/user-research"/><meta property="twitter:url" content="https://lennys-wiki.vercel.app/articles/user-research"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="User Research You are about to make a product decision — a new feature, a redesign, a pricing change — and you realize you do not actually know what your users think, feel, or do."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL1VzZXJzL2NoYXJsaWVkZWlzdC9EZXNrdG9wL05ldyBSb290IERvY3MvQ3JlYXRpdmUgSW50ZWxsaWdlbmNlIEFnZW5jeS93aWtpLXByb2plY3RzL2xlbm55cy13aWtpL3NpdGUvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="../prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://lennys-wiki.vercel.app/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://lennys-wiki.vercel.app/articles/user-research-og-image.webp"/><meta property="og:image:url" content="https://lennys-wiki.vercel.app/articles/user-research-og-image.webp"/><meta name="twitter:image" content="https://lennys-wiki.vercel.app/articles/user-research-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="articles/user-research"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">Lenny's Podcast Wiki</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>Search</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="open" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>{let order=[\&quot;domains\&quot;,\&quot;frameworks\&quot;,\&quot;cases\&quot;,\&quot;people\&quot;],aIdx=order.indexOf(a.slugSegment??\&quot;\&quot;),bIdx=order.indexOf(b.slugSegment??\&quot;\&quot;);return aIdx!==-1&amp;&amp;bIdx!==-1?aIdx-bIdx:aIdx!==-1?-1:bIdx!==-1?1:a.displayName.localeCompare(b.displayName)}&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&amp;&amp;node.slugSegment!==\&quot;episodes\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-34"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-34" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><div id="chat-banner" class="chat-banner "><div class="chat-banner-inner"><div class="chat-banner-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="chat-banner-text"><span class="chat-banner-label">Ask the Archive</span><span class="chat-banner-desc">Chat with an AI that's studied every Lenny's Podcast episode</span></div><div class="chat-banner-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg></div></div></div><script>
+(function() {
+  const banner = document.getElementById('chat-banner');
+  if (!banner) return;
+
+  banner.addEventListener('click', function() {
+    const toggle = document.getElementById('wiki-chat-toggle');
+    const panel = document.getElementById('wiki-chat-panel');
+    if (toggle && panel) {
+      panel.classList.add('open');
+      const input = document.getElementById('wiki-chat-input') || document.getElementById('wiki-chat-email');
+      if (input) input.focus();
+    }
+  });
+})();
+</script><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../articles/">articles</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>User Research</a></div></nav><h1 class="article-title">User Research</h1><p show-comma="true" class="content-meta"><time datetime="2026-02-05T19:00:56.348Z">Feb 05, 2026</time><span>14 min read</span></p></div></div><article class="popover-hint"><h1 id="user-research">User Research<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-research" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>You are about to make a product decision — a new feature, a redesign, a pricing change — and you realize you do not actually know what your users think, feel, or do. You know what your dashboard says. You know what Sales reported from the last few calls. You have hunches. But you do not have direct evidence from the people who use your product. The question is not whether you should do research. It is how much, what kind, and how to avoid the traps that make most research useless.</p>
+<h2 id="the-core-idea">The Core Idea<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-core-idea" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>User research is the practice of systematically learning about your users — their behaviors, needs, motivations, and constraints — to make better product decisions. The key word is “systematically.” Everyone talks to users occasionally. The difference between product teams that make good decisions and those that do not is whether research is continuous, structured, and actually influences what gets built.</p>
+<p><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Teresa Torres</a>, author of <em>Continuous Discovery Habits</em> and coach to over 11,000 product managers, provides the foundational framework. She developed the opportunity solution tree specifically because “while as an industry, some companies are moving from this output focus to an outcome focus, most product teams don’t really know how to manage this really complex problem of how do I start from an outcome and figure out what to build.” The biggest mistake product teams make is not doing too little research — it is doing research in big batches, disconnected from the decisions they need to make.</p>
+<h2 id="continuous-discovery-vs-project-based-research">Continuous Discovery vs. Project-Based Research<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#continuous-discovery-vs-project-based-research" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This is the most consequential choice you will make about research: do you treat it as an ongoing habit or as a project that happens when a big decision looms?</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Dimension</th><th>Continuous Discovery</th><th>Project-Based Research</th></tr></thead><tbody><tr><td>Cadence</td><td>At least one user interview per week, every week</td><td>Research “sprints” tied to major initiatives</td></tr><tr><td>Who does it</td><td>Product trio (PM, designer, engineer)</td><td>Dedicated researchers or outsourced agencies</td></tr><tr><td>Time to insight</td><td>Hours to days</td><td>Weeks to months</td></tr><tr><td>Cost per insight</td><td>Low (15-30 min interviews, no formal recruitment)</td><td>High (recruitment, incentives, analysis, reporting)</td></tr><tr><td>Risk of shelf-ware</td><td>Low — insights feed directly into current work</td><td>High — reports often arrive after decisions are made</td></tr><tr><td>Depth</td><td>Moderate — breadth across many small questions</td><td>Deep — thorough exploration of specific questions</td></tr></tbody></table></div>
+<p><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Torres</a> advocates unambiguously for continuous discovery: “If you are only doing research when you have a big project, you are making most of your daily decisions in the dark.” Her recommendation is that the product trio — PM, designer, and tech lead — should conduct at least one user interview per week, every week, regardless of what is on the roadmap.</p>
+<p>This does not replace deep research projects. It supplements them. Continuous discovery handles the steady stream of small questions (“do users understand this label?”, “what workaround are they using for X?”), while project-based research handles the big strategic questions (“should we enter the enterprise market?”, “what is the right pricing model?”).</p>
+<h2 id="how-many-interviews-are-enough">How Many Interviews Are Enough?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-many-interviews-are-enough" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This is the question every PM asks. The answer depends on what you are trying to learn.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Research Goal</th><th>Minimum Interviews</th><th>When to Stop</th></tr></thead><tbody><tr><td>Identifying major usability issues</td><td>5-8</td><td>After 5 users, you have found ~85% of usability problems (Nielsen/Norman Group data)</td></tr><tr><td>Understanding user segments</td><td>8-12 per segment</td><td>When new interviews stop revealing new segments or behaviors</td></tr><tr><td>Validating a Jobs to Be Done hypothesis</td><td>10-15</td><td>When the “forces of progress” diagram stops changing</td></tr><tr><td>Exploratory / generative research</td><td>15-30</td><td>When you reach theoretical saturation — new interviews confirm but do not expand your understanding</td></tr><tr><td>Testing a specific prototype</td><td>5-7</td><td>When the pattern of feedback stabilizes</td></tr></tbody></table></div>
+<p><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Torres</a> reframes the question entirely: “Stop asking ‘how many interviews do I need?’ Start asking ‘am I talking to at least one user every week?’ If the answer is yes, you will naturally accumulate the evidence you need. If the answer is no, even 50 interviews in a burst will not save you.”</p>
+<p>The practical truth is that one interview per week, sustained over a quarter, gives you 12-13 conversations. That is more than most PMs conduct in an entire year of project-based research. The consistency matters more than the volume.</p>
+<h2 id="when-qualitative-vs-quantitative">When Qualitative vs. Quantitative<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#when-qualitative-vs-quantitative" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Product teams often default to quantitative data (dashboards, A/B tests, surveys) because it feels more objective. But quantitative data answers “what” and “how much” — it does not answer “why.” You need both, and the skill is knowing which to reach for when.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Question Type</th><th>Use Qualitative</th><th>Use Quantitative</th></tr></thead><tbody><tr><td>”Why are users dropping off at step 3?”</td><td>Interview users who dropped off — ask them to walk through their experience</td><td>Funnel analysis to quantify the drop-off and segment by user type</td></tr><tr><td>”Do users want feature X?”</td><td>Interview to understand the underlying need — they may want X or something different</td><td>Survey a larger sample once you have a hypothesis from interviews</td></tr><tr><td>”Is version A or B better?”</td><td>Usability test both with 5-7 users to understand <em>why</em> one is better</td><td>A/B test to measure <em>which</em> is better at scale</td></tr><tr><td>”Who are our users?”</td><td>Interviews and observation to build personas grounded in real behavior</td><td>Analytics to size segments and validate persona distribution</td></tr><tr><td>”Is this problem worth solving?”</td><td>Interviews to assess pain intensity, frequency, and willingness to pay</td><td>Market sizing and competitive analysis to assess opportunity size</td></tr></tbody></table></div>
+<p><a href="../episodes/judd-antin" class="internal alias" data-slug="episodes/judd-antin">Judd Antin</a>, former head of research at Airbnb and Meta, raises a sharper warning. He coined the term “user-centered performance” to describe “customer obsession or user-centered practice that is symbolic rather than focused on learning. It’s hugely common. Every time a PM comes to a researcher at the end of a product process and says, ‘Can you just run a quick user study just to validate our assumptions,’ that’s user-centered performance. It’s too late to matter.” His mantra: “We don’t validate, we falsify. We are looking to be wrong.”</p>
+<p>A practical rule: start qualitative, go quantitative. Interview first to understand the landscape, then quantify to size it. The reverse — starting with a survey — is a common anti-pattern because you do not know which questions to ask until you have listened to users describe their experience in their own words.</p>
+<h2 id="jobs-to-be-done-interview-methodology">Jobs to Be Done Interview Methodology<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#jobs-to-be-done-interview-methodology" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The Jobs to Be Done (JTBD) framework, developed by Clayton Christensen and operationalized by <a href="../episodes/bob-moesta" class="internal alias" data-slug="episodes/bob-moesta">Bob Moesta</a>, is the most powerful interview methodology for understanding <em>why</em> users make the decisions they make.</p>
+<p>The core principle: users do not buy products. They “hire” products to do a job. Understanding the job — the progress the user is trying to make in a specific circumstance — reveals what to build far more reliably than asking users what features they want.</p>
+<h3 id="the-jtbd-interview-structure">The JTBD Interview Structure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#the-jtbd-interview-structure" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>A JTBD interview reconstructs a specific decision in granular detail. You are not asking about preferences or hypotheticals. You are asking the user to walk through a real, past decision step by step.</p>
+<p><strong>Phase 1: Set the stage.</strong> “Tell me about the last time you [signed up for / purchased / switched to] [product]. Walk me through what was happening.”</p>
+<p><strong>Phase 2: Explore the timeline.</strong> Reconstruct the journey from first thought to action:</p>
+<ul>
+<li>When did you first realize you needed something different?</li>
+<li>What were you using before? What was wrong with it?</li>
+<li>How did you find us? What else did you consider?</li>
+<li>What almost stopped you from switching?</li>
+<li>What pushed you to finally act?</li>
+</ul>
+<p><strong>Phase 3: Map the forces.</strong> JTBD identifies four forces that govern every decision:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Force</th><th>Direction</th><th>Example</th></tr></thead><tbody><tr><td><strong>Push</strong> (dissatisfaction with current solution)</td><td>Toward change</td><td>”Our old tool kept crashing during demos”</td></tr><tr><td><strong>Pull</strong> (attraction of new solution)</td><td>Toward change</td><td>”I saw that your product had real-time collaboration”</td></tr><tr><td><strong>Anxiety</strong> (fears about the new solution)</td><td>Against change</td><td>”What if the migration breaks our data?”</td></tr><tr><td><strong>Habit</strong> (comfort with current solution)</td><td>Against change</td><td>”We have been using the old tool for three years”</td></tr></tbody></table></div>
+<p>When Push + Pull > Anxiety + Habit, the user switches. Understanding these forces for your users tells you exactly what to emphasize in your product and marketing (strengthen Pull, reduce Anxiety) and what is keeping potential users from switching (Habit is stronger than you think).</p>
+<h3 id="what-makes-jtbd-interviews-different">What Makes JTBD Interviews Different<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-makes-jtbd-interviews-different" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Typical Interview</th><th>JTBD Interview</th></tr></thead><tbody><tr><td>”What features do you want?&quot;</td><td>&quot;What were you trying to accomplish when you signed up?”</td></tr><tr><td>Asks about preferences</td><td>Asks about past behavior</td></tr><tr><td>Forward-looking (hypothetical)</td><td>Backward-looking (factual)</td></tr><tr><td>User plays product designer</td><td>User plays storyteller</td></tr><tr><td>Produces feature wish lists</td><td>Produces causal understanding</td></tr></tbody></table></div>
+<p><a href="../episodes/bob-moesta" class="internal alias" data-slug="episodes/bob-moesta">Moesta</a> emphasizes: “People hire products, they don’t buy them, they hire them to make progress in their life.” The key is studying specific past decisions, not abstract preferences: “It’s not just about pain and gain, it’s about context and outcomes. And so when you frame it that way, it becomes a vector, a vector of progress or a vector of intention of what they’re trying to do.”</p>
+<h2 id="research-anti-patterns">Research Anti-Patterns<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#research-anti-patterns" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-leading-questions">1. Leading Questions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-leading-questions" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>The most common and most destructive research mistake. Leading questions embed the answer you want to hear.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Leading (Bad)</th><th>Neutral (Good)</th></tr></thead><tbody><tr><td>“Would you find it helpful if we added X?&quot;</td><td>&quot;How do you currently handle this situation?&quot;</td></tr><tr><td>&quot;Don’t you think this flow is confusing?&quot;</td><td>&quot;Walk me through what you did here.&quot;</td></tr><tr><td>&quot;Most users love this feature — what do you think?&quot;</td><td>&quot;Tell me about your experience with this feature.&quot;</td></tr><tr><td>&quot;Is the price too high?&quot;</td><td>&quot;How do you think about the value you get relative to what you pay?”</td></tr></tbody></table></div>
+<p>Leading questions feel productive because they produce clear answers. But the answers reflect your hypothesis, not the user’s reality. You leave the interview more confident and no more informed.</p>
+<h3 id="2-confirmation-bias">2. Confirmation Bias<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-confirmation-bias" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>You enter the interview with a hypothesis and unconsciously seek evidence that confirms it. You probe deeper on answers that support your view and move quickly past answers that contradict it. You remember the confirming anecdotes and forget the disconfirming ones.</p>
+<p>The fix: before each interview, write down what you expect to hear. After the interview, note where reality diverged from expectation. The divergences are where the real insights live.</p>
+<h3 id="3-surveying-instead-of-interviewing">3. Surveying Instead of Interviewing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-surveying-instead-of-interviewing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Surveys are useful for quantifying known phenomena. They are terrible for discovery. A survey with pre-defined answer options can only confirm or deny your existing understanding. It cannot reveal what you do not know you do not know.</p>
+<p><a href="../episodes/gia-laudi" class="internal alias" data-slug="episodes/gia-laudi">Gia Laudi</a>, co-founder of Forget The Funnel, argues that traditional funnel metrics miss the point entirely: “It puts businesses at the center of the business versus putting customers at the center. It’s about the values of the business, not the value to the customer that’s being measured.” She advocates for Jobs to Be Done-driven customer research as the foundation, with surveys layered on only after interview insights have shaped the right questions.</p>
+<p>The exception: open-ended survey questions (“Describe in your own words why you signed up”) can serve as a lightweight qualitative input. But they produce lower-quality insights than interviews because you cannot ask follow-up questions.</p>
+<h3 id="4-asking-users-to-design-the-product">4. Asking Users to Design the Product<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-asking-users-to-design-the-product" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>“What features would you want?” is not a research question. It is an abdication of the PM’s job. Users are experts on their problems. They are not product designers. Henry Ford’s possibly apocryphal line — “If I had asked people what they wanted, they would have said faster horses” — captures the principle even if the attribution is dubious. Ask about problems, contexts, and constraints. Leave solutions to the product team.</p>
+<h3 id="5-researching-without-a-decision-in-mind">5. Researching Without a Decision in Mind<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-researching-without-a-decision-in-mind" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Research without a specific decision it needs to inform becomes a knowledge-gathering exercise that produces interesting-but-unused reports. Before every research effort, answer: “What decision will this research help us make? What will we do differently based on what we learn?”</p>
+<p><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Torres</a> warns that even the opportunity solution tree can be misapplied: “I can tell you that 98% of people that write opportunities write them as solutions. We tend to just really struggle with this distinction between the problem space and the solution space.” Every interview should be connected to a specific product decision the team is facing. If you cannot name the decision, you are not doing research — you are doing anthropology.</p>
+<h2 id="how-to-synthesize-findings-into-product-decisions">How to Synthesize Findings into Product Decisions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#how-to-synthesize-findings-into-product-decisions" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Raw interview notes are not insights. They are data. The synthesis step — turning individual observations into patterns that inform decisions — is where most research efforts fail. Teams conduct great interviews and then do nothing with them because the path from notes to action is unclear.</p>
+<h3 id="a-practical-synthesis-process">A Practical Synthesis Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a-practical-synthesis-process" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Step 1: Capture quotes, not summaries.</strong> During interviews, record exact quotes and specific behaviors. “Three out of five users clicked the wrong button” is more useful than “users found the flow confusing.”</p>
+<p><strong>Step 2: Look for patterns across interviews.</strong> After 5-8 interviews on the same topic, cluster similar observations. What themes appear in 3+ interviews? What surprises appeared?</p>
+<p><strong>Step 3: Create an opportunity solution tree.</strong> <a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Torres</a> developed this tool to connect research to decisions:</p>
+<pre><code>Desired Outcome (metric you want to move)
+├── Opportunity 1 (unmet need discovered in research)
+│   ├── Solution A
+│   ├── Solution B
+│   └── Solution C
+├── Opportunity 2
+│   ├── Solution D
+│   └── Solution E
+└── Opportunity 3
+    └── Solution F
+</code></pre>
+<p>The tree forces you to separate the opportunity (what users need) from the solution (what you might build). Multiple solutions can address the same opportunity. The best teams generate 3-5 potential solutions per opportunity and then test assumptions before committing to build.</p>
+<p><strong>Step 4: Identify assumptions to test.</strong> Every solution carries assumptions: users will discover this feature, they will understand the value proposition, they will use it frequently enough to form a habit. List the riskiest assumptions and design small experiments to test them before committing to full development.</p>
+<p><strong>Step 5: Share findings as stories, not reports.</strong> A 30-page research report will not be read. A 5-minute video clip of a user struggling with the onboarding flow will change the roadmap. <a href="../episodes/judd-antin" class="internal alias" data-slug="episodes/judd-antin">Antin</a> advises: “The unit of research communication is the story, not the statistic. One vivid user story does more to change minds than twenty pages of analysis.”</p>
+<h2 id="building-a-research-practice-from-zero">Building a Research Practice from Zero<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#building-a-research-practice-from-zero" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>If your team does no research today, here is how to start:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Week</th><th>Action</th><th>Time Investment</th></tr></thead><tbody><tr><td>Week 1</td><td>Schedule 2 interviews with recent users (use your existing user list — no formal recruitment needed)</td><td>2 hours total</td></tr><tr><td>Week 2</td><td>Debrief with your designer and tech lead. What surprised you?</td><td>30 minutes</td></tr><tr><td>Week 3</td><td>Schedule 1 interview. Focus on a specific decision you are facing</td><td>1 hour</td></tr><tr><td>Week 4</td><td>Create your first opportunity solution tree from 3-4 interviews</td><td>1 hour</td></tr><tr><td>Ongoing</td><td>1 interview per week, 15-30 minutes each</td><td>30 min/week + 15 min debrief</td></tr></tbody></table></div>
+<p><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Torres</a> emphasizes that the barrier to starting is lower than teams think: “You do not need a research plan. You do not need formal recruitment. You do not need a screened panel. You need 15 minutes with someone who recently used your product and the willingness to listen.”</p>
+<h2 id="key-takeaway">Key Takeaway<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#key-takeaway" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Interview at least one user per week, every week. Consistency beats intensity. Twelve interviews over a quarter is more valuable than twelve interviews in a sprint.</li>
+<li>Start qualitative, go quantitative. Interviews reveal the landscape; surveys and analytics size it. Reversing this sequence means you will precisely measure the wrong things.</li>
+<li>Use JTBD interviews to understand decisions, not preferences. Ask users to reconstruct past behavior, not predict future behavior. The four forces (Push, Pull, Anxiety, Habit) reveal what to build and how to position it.</li>
+<li>Every research effort must be connected to a specific product decision. If you cannot name the decision, stop and define it before scheduling another interview.</li>
+<li>Synthesize using opportunity solution trees. Separate opportunities (user needs) from solutions (things you might build), generate multiple options per opportunity, and test your riskiest assumptions before committing to build.</li>
+</ul>
+<h2 id="related">Related<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#related" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../articles/product-sense" class="internal alias" data-slug="articles/product-sense">Product Sense</a> — Research is how you develop and validate product intuition</li>
+<li><a href="../articles/roadmap-prioritization" class="internal alias" data-slug="articles/roadmap-prioritization">Roadmap Prioritization</a> — Research provides the evidence base for prioritization decisions</li>
+<li><a href="../articles/feature-launches" class="internal alias" data-slug="articles/feature-launches">Feature Launches</a> — Pre-launch research validates assumptions; post-launch research validates outcomes</li>
+<li><a href="../articles/activation-rate" class="internal alias" data-slug="articles/activation-rate">Activation Rate</a> — User research reveals why activation succeeds or fails</li>
+<li><a href="../product-market-fit" class="internal alias" data-slug="product-market-fit">Product-Market Fit</a> — The Sean Ellis survey is a specific research tool for measuring PMF</li>
+</ul>
+<h2 id="sources">Sources<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sources" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../teresa-torres" class="internal alias" data-slug="teresa-torres">Teresa Torres on continuous product discovery</a> — Opportunity solution tree framework, 11,000+ PMs trained, weekly interview cadence, problem space vs. solution space distinction</li>
+<li><a href="../episodes/judd-antin" class="internal alias" data-slug="episodes/judd-antin">Judd Antin on the UX research reckoning</a> — “User-centered performance” concept, falsification over validation, research at Airbnb and Meta</li>
+<li><a href="../episodes/gia-laudi" class="internal alias" data-slug="episodes/gia-laudi">Georgiana Laudi on customer-led growth</a> — Forget The Funnel, JTBD for SaaS, customer value over business metrics, post-acquisition retention focus</li>
+<li><a href="../episodes/bob-moesta" class="internal alias" data-slug="episodes/bob-moesta">Bob Moesta on Jobs to Be Done</a> — JTBD co-creator, struggling moments as demand signals, context and outcomes over pain and gain, Southern New Hampshire University case study</li>
+<li><a href="../episodes/kevin-yien" class="internal alias" data-slug="episodes/kevin-yien">Kevin Yien on automating user insights</a> — Automated research systems, decision logs, unorthodox PM tactics</li>
+</ul></article><hr/><div class="page-footer"><script>
+(function() {
+  const WIKI = "lennys";
+  const API_URL = "https://api-production-4224.up.railway.app";
+
+  const THINKING_PHRASES = [
+    "Consulting the archives...",
+    "Searching transcripts...",
+    "Cross-referencing sources...",
+    "Pondering the question...",
+    "Evaluating the evidence...",
+    "Synthesizing insights...",
+  ];
+
+  const styles = `
+    #wiki-chat-widget {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    #wiki-chat-toggle {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--secondary, #2563eb);
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+    #wiki-chat-toggle:hover { transform: scale(1.05); }
+    #wiki-chat-toggle svg { width: 26px; height: 26px; }
+    #wiki-chat-panel {
+      display: none;
+      position: absolute;
+      bottom: 65px;
+      right: 0;
+      width: 360px;
+      max-height: 480px;
+      background: var(--light, white);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
+      flex-direction: column;
+    }
+    #wiki-chat-panel.open { display: flex; }
+    #wiki-chat-header {
+      background: var(--secondary, #2563eb);
+      color: white;
+      padding: 14px 16px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #wiki-chat-close {
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    #wiki-chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 14px;
+      max-height: 280px;
+      background: var(--lightgray, #f9fafb);
+    }
+    .wiki-chat-message {
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      max-width: 90%;
+      line-height: 1.5;
+      font-size: 13px;
+    }
+    .wiki-chat-message.user {
+      background: var(--secondary, #2563eb);
+      color: white;
+      margin-left: auto;
+    }
+    .wiki-chat-message.bot {
+      background: var(--light, white);
+      border: 1px solid var(--gray, #e5e7eb);
+      color: var(--dark, #333);
+    }
+    .wiki-chat-message.bot p { margin: 0 0 8px 0; }
+    .wiki-chat-message.bot p:last-child { margin-bottom: 0; }
+    .wiki-chat-thinking { color: var(--gray, #6b7280); font-style: italic; }
+    #wiki-chat-input-area {
+      padding: 12px;
+      border-top: 1px solid var(--gray, #e5e7eb);
+      background: var(--light, white);
+    }
+    #wiki-chat-email-gate { text-align: center; padding: 16px; }
+    #wiki-chat-email-gate input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--gray, #d1d5db);
+      border-radius: 6px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    #wiki-chat-email-gate button, #wiki-chat-send {
+      padding: 10px 16px;
+      background: var(--secondary, #2563eb);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    #wiki-chat-email-gate button:disabled, #wiki-chat-send:disabled {
+      background: var(--gray, #9ca3af);
+      cursor: not-allowed;
+    }
+    #wiki-chat-form { display: flex; gap: 8px; }
+    #wiki-chat-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--gray, #d1d5db);
+      border-radius: 6px;
+      font-size: 14px;
+    }
+  `;
+
+  function createWidget() {
+    const widget = document.createElement('div');
+    widget.id = 'wiki-chat-widget';
+    widget.innerHTML = `
+      <style>${styles}</style>
+      <button id="wiki-chat-toggle" aria-label="Open chat">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </button>
+      <div id="wiki-chat-panel">
+        <div id="wiki-chat-header">
+          <span>Ask the Archive</span>
+          <button id="wiki-chat-close">&times;</button>
+        </div>
+        <div id="wiki-chat-messages"></div>
+        <div id="wiki-chat-input-area">
+          <div id="wiki-chat-email-gate">
+            <p style="margin-bottom:12px;color:var(--dark,#374151);">Enter your email to start chatting</p>
+            <input type="email" id="wiki-chat-email" placeholder="you@example.com" />
+            <button id="wiki-chat-email-submit" style="width:100%;" disabled>Continue</button>
+          </div>
+          <form id="wiki-chat-form" style="display:none;">
+            <input type="text" id="wiki-chat-input" placeholder="Ask a question..." />
+            <button type="submit" id="wiki-chat-send">Send</button>
+          </form>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(widget);
+    initWidget();
+  }
+
+  function initWidget() {
+    const toggle = document.getElementById('wiki-chat-toggle');
+    const panel = document.getElementById('wiki-chat-panel');
+    const closeBtn = document.getElementById('wiki-chat-close');
+    const emailGate = document.getElementById('wiki-chat-email-gate');
+    const emailInput = document.getElementById('wiki-chat-email');
+    const emailSubmit = document.getElementById('wiki-chat-email-submit');
+    const chatForm = document.getElementById('wiki-chat-form');
+    const chatInput = document.getElementById('wiki-chat-input');
+    const messages = document.getElementById('wiki-chat-messages');
+
+    let userEmail = localStorage.getItem('wiki_chat_email');
+    let isLoading = false;
+
+    if (userEmail) {
+      emailGate.style.display = 'none';
+      chatForm.style.display = 'flex';
+    }
+
+    toggle.addEventListener('click', () => {
+      panel.classList.toggle('open');
+      if (panel.classList.contains('open')) {
+        (userEmail ? chatInput : emailInput).focus();
+      }
+    });
+
+    closeBtn.addEventListener('click', () => panel.classList.remove('open'));
+
+    emailInput.addEventListener('input', () => {
+      emailSubmit.disabled = !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+    });
+
+    emailSubmit.addEventListener('click', async () => {
+      userEmail = emailInput.value.toLowerCase();
+      localStorage.setItem('wiki_chat_email', userEmail);
+      try {
+        await fetch(API_URL + '/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: userEmail }),
+        });
+      } catch (e) {}
+      emailGate.style.display = 'none';
+      chatForm.style.display = 'flex';
+      chatInput.focus();
+      addMessage('bot', "Hi! Ask me anything about the archive.");
+    });
+
+    chatForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const query = chatInput.value.trim();
+      if (!query || isLoading) return;
+      addMessage('user', query);
+      chatInput.value = '';
+      isLoading = true;
+      let phraseIdx = 0;
+      const thinkingMsg = addMessage('bot', THINKING_PHRASES[0], 'wiki-chat-thinking');
+      const interval = setInterval(() => {
+        phraseIdx = (phraseIdx + 1) % THINKING_PHRASES.length;
+        thinkingMsg.textContent = THINKING_PHRASES[phraseIdx];
+      }, 2000);
+      try {
+        const res = await fetch(API_URL + '/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-User-Email': userEmail },
+          body: JSON.stringify({ wiki: WIKI, query, limit: 8 }),
+        });
+        const data = await res.json();
+        thinkingMsg.remove();
+        if (res.ok) {
+          let html = formatMd(data.answer);
+          if (data.sources?.length) {
+            html += '<div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--gray,#e5e7eb);font-size:11px;color:var(--gray,#6b7280);"><strong>Sources:</strong> ' +
+              data.sources.slice(0,3).map(s => s.title).join(', ') + '</div>';
+          }
+          addMessage('bot', html, null, true);
+        } else {
+          addMessage('bot', 'Error: ' + (data.detail || 'Request failed'));
+        }
+      } catch (err) {
+        thinkingMsg.remove();
+        addMessage('bot', 'Error: ' + err.message);
+      } finally {
+        clearInterval(interval);
+        isLoading = false;
+      }
+    });
+
+    function addMessage(type, content, extraClass, isHtml) {
+      const msg = document.createElement('div');
+      msg.className = 'wiki-chat-message ' + type + (extraClass ? ' ' + extraClass : '');
+      if (isHtml) msg.innerHTML = content;
+      else msg.textContent = content;
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+      return msg;
+    }
+
+    function formatMd(text) {
+      return text
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n/g, '<br>')
+        .replace(/^/, '<p>').replace(/$/, '</p>');
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', createWidget);
+  } else {
+    createWidget();
+  }
+})();
+</script></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-26" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#user-research" data-for="user-research">User Research</a></li><li class="depth-1"><a href="#the-core-idea" data-for="the-core-idea">The Core Idea</a></li><li class="depth-1"><a href="#continuous-discovery-vs-project-based-research" data-for="continuous-discovery-vs-project-based-research">Continuous Discovery vs. Project-Based Research</a></li><li class="depth-1"><a href="#how-many-interviews-are-enough" data-for="how-many-interviews-are-enough">How Many Interviews Are Enough?</a></li><li class="depth-1"><a href="#when-qualitative-vs-quantitative" data-for="when-qualitative-vs-quantitative">When Qualitative vs. Quantitative</a></li><li class="depth-1"><a href="#jobs-to-be-done-interview-methodology" data-for="jobs-to-be-done-interview-methodology">Jobs to Be Done Interview Methodology</a></li><li class="depth-2"><a href="#the-jtbd-interview-structure" data-for="the-jtbd-interview-structure">The JTBD Interview Structure</a></li><li class="depth-2"><a href="#what-makes-jtbd-interviews-different" data-for="what-makes-jtbd-interviews-different">What Makes JTBD Interviews Different</a></li><li class="depth-1"><a href="#research-anti-patterns" data-for="research-anti-patterns">Research Anti-Patterns</a></li><li class="depth-2"><a href="#1-leading-questions" data-for="1-leading-questions">1. Leading Questions</a></li><li class="depth-2"><a href="#2-confirmation-bias" data-for="2-confirmation-bias">2. Confirmation Bias</a></li><li class="depth-2"><a href="#3-surveying-instead-of-interviewing" data-for="3-surveying-instead-of-interviewing">3. Surveying Instead of Interviewing</a></li><li class="depth-2"><a href="#4-asking-users-to-design-the-product" data-for="4-asking-users-to-design-the-product">4. Asking Users to Design the Product</a></li><li class="depth-2"><a href="#5-researching-without-a-decision-in-mind" data-for="5-researching-without-a-decision-in-mind">5. Researching Without a Decision in Mind</a></li><li class="depth-1"><a href="#how-to-synthesize-findings-into-product-decisions" data-for="how-to-synthesize-findings-into-product-decisions">How to Synthesize Findings into Product Decisions</a></li><li class="depth-2"><a href="#a-practical-synthesis-process" data-for="a-practical-synthesis-process">A Practical Synthesis Process</a></li><li class="depth-1"><a href="#building-a-research-practice-from-zero" data-for="building-a-research-practice-from-zero">Building a Research Practice from Zero</a></li><li class="depth-1"><a href="#key-takeaway" data-for="key-takeaway">Key Takeaway</a></li><li class="depth-1"><a href="#related" data-for="related">Related</a></li><li class="depth-1"><a href="#sources" data-for="sources">Sources</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../articles/product-sense" class="internal">Product Sense</a></li><li><a href="../articles/roadmap-prioritization" class="internal">Roadmap Prioritization</a></li><li><a href="../episodes/merci-grace" class="internal">merci-grace</a></li><li><a href="../" class="internal">Lenny's Podcast Wiki</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://www.lennysnewsletter.com">Lenny's Newsletter</a></li><li><a href="https://www.youtube.com/@LennysPodcast">YouTube</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="../postscript.js" type="module" data-persist="true"></script></html>

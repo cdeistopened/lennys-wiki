@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>Lenny&#039;s Podcast Wiki</title>
+      <link>https://lennys-wiki.vercel.app</link>
+      <description>Last 10 notes on Lenny&#039;s Podcast Wiki</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Episode Archive</title>
+    <link>https://lennys-wiki.vercel.app/episodes/</link>
+    <guid>https://lennys-wiki.vercel.app/episodes/</guid>
+    <description><![CDATA[ Episode Archive 303 episodes of Lenny’s Podcast covering product management, growth, and startup strategy with Lenny Rachitsky. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 22:05:46 GMT</pubDate>
+  </item><item>
+    <title>Retention</title>
+    <link>https://lennys-wiki.vercel.app/articles/retention</link>
+    <guid>https://lennys-wiki.vercel.app/articles/retention</guid>
+    <description><![CDATA[ Retention You are growing, but users are leaving as fast as they arrive. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:17:26 GMT</pubDate>
+  </item><item>
+    <title>A/B Testing</title>
+    <link>https://lennys-wiki.vercel.app/articles/ab-testing</link>
+    <guid>https://lennys-wiki.vercel.app/articles/ab-testing</guid>
+    <description><![CDATA[ A/B Testing You have a feature change you believe will improve a metric. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:15:14 GMT</pubDate>
+  </item><item>
+    <title>North Star Metric</title>
+    <link>https://lennys-wiki.vercel.app/articles/north-star-metric</link>
+    <guid>https://lennys-wiki.vercel.app/articles/north-star-metric</guid>
+    <description><![CDATA[ North Star Metric You need a single metric that your entire product team can align around — one number that, if it goes up, means the product is getting better for customers and the business is growing. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:13:28 GMT</pubDate>
+  </item><item>
+    <title>Go-to-Market</title>
+    <link>https://lennys-wiki.vercel.app/articles/go-to-market</link>
+    <guid>https://lennys-wiki.vercel.app/articles/go-to-market</guid>
+    <description><![CDATA[ Go-to-Market You are deciding how to bring your product to market — or you have a product in market and the current motion is not working. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:12:45 GMT</pubDate>
+  </item><item>
+    <title>One-on-Ones</title>
+    <link>https://lennys-wiki.vercel.app/articles/one-on-ones</link>
+    <guid>https://lennys-wiki.vercel.app/articles/one-on-ones</guid>
+    <description><![CDATA[ One-on-Ones You are a manager with 5-8 direct reports, and you are spending 3-4 hours a week in one-on-ones that feel like status updates. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:10:47 GMT</pubDate>
+  </item><item>
+    <title>Activation Rate</title>
+    <link>https://lennys-wiki.vercel.app/articles/activation-rate</link>
+    <guid>https://lennys-wiki.vercel.app/articles/activation-rate</guid>
+    <description><![CDATA[ Activation Rate You are looking at your sign-up numbers and wondering why growth is not translating into an active user base. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:09:02 GMT</pubDate>
+  </item><item>
+    <title>Hiring PMs</title>
+    <link>https://lennys-wiki.vercel.app/articles/hiring-pms</link>
+    <guid>https://lennys-wiki.vercel.app/articles/hiring-pms</guid>
+    <description><![CDATA[ Hiring PMs You have an open PM role and a stack of resumes. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:08:47 GMT</pubDate>
+  </item><item>
+    <title>Onboarding</title>
+    <link>https://lennys-wiki.vercel.app/articles/onboarding</link>
+    <guid>https://lennys-wiki.vercel.app/articles/onboarding</guid>
+    <description><![CDATA[ Onboarding You have users signing up but they are not sticking. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:07:47 GMT</pubDate>
+  </item><item>
+    <title>Product Sense</title>
+    <link>https://lennys-wiki.vercel.app/articles/product-sense</link>
+    <guid>https://lennys-wiki.vercel.app/articles/product-sense</guid>
+    <description><![CDATA[ Product Sense You are in a meeting. The data is ambiguous. User research points in one direction, the market in another, and your CEO in a third. ]]></description>
+    <pubDate>Thu, 05 Feb 2026 19:07:04 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
