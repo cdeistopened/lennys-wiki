@@ -24,31 +24,31 @@ const config: QuartzConfig = {
       cdnCaching: true,
       typography: {
         header: "Space Grotesk",
-        body: "Plus Jakarta Sans",
+        body: "Inter",
         code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#f8f8ec",       // paper
-          lightgray: "#e8e4dc",   // mist
-          gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#0a1628",        // navy
-          secondary: "#567cff",   // electric (Lenny accent)
-          tertiary: "#c9a961",    // gold
-          highlight: "rgba(86, 124, 255, 0.12)",
-          textHighlight: "rgba(86, 124, 255, 0.25)",
+          light: "#FAF6EF",
+          lightgray: "#E0D9CC",
+          gray: "#9B9890",
+          darkgray: "#6F6E69",
+          dark: "#1A1A1A",
+          secondary: "#C8943E",
+          tertiary: "#B07D2E",
+          highlight: "rgba(200, 148, 62, 0.10)",
+          textHighlight: "rgba(200, 148, 62, 0.20)",
         },
         darkMode: {
-          light: "#0a1628",       // navy
-          lightgray: "#162440",
-          gray: "#4a5568",
-          darkgray: "#e8e4dc",    // mist
-          dark: "#f8f8ec",        // paper
-          secondary: "#567cff",   // electric
-          tertiary: "#c9a961",    // gold
-          highlight: "rgba(86, 124, 255, 0.12)",
-          textHighlight: "rgba(86, 124, 255, 0.25)",
+          light: "#1E1E1E",
+          lightgray: "#333333",
+          gray: "#6F6E69",
+          darkgray: "#9B9890",
+          dark: "#E8E4DD",
+          secondary: "#C8943E",
+          tertiary: "#D4A84E",
+          highlight: "rgba(200, 148, 62, 0.12)",
+          textHighlight: "rgba(200, 148, 62, 0.20)",
         },
       },
     },
