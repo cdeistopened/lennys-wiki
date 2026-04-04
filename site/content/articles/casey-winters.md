@@ -34,7 +34,7 @@ This is a content loop, not a viral loop. The growth engine was not users inviti
 Winters is emphatic that [[retention|retention]] is not one of many growth metrics — it is *the* growth metric. His reasoning:
 
 - Acquisition without retention is waste. Every dollar spent acquiring users who churn is a dollar burned.
-- Retention compounds. A 10 percentage point improvement in monthly retention has a larger long-term impact on active users than doubling acquisition.
+- [[retention|Retention]] compounds. A 10 percentage point improvement in monthly retention has a larger long-term impact on active users than doubling acquisition.
 - Retention validates product-market fit. If users are not staying, the product is not delivering enough value — and no amount of acquisition tactics will fix that.
 
 His recommended sequence: fix retention first, then optimize activation, then scale acquisition. Most companies work the sequence in reverse and wonder why growth is not sustainable.
@@ -47,7 +47,7 @@ Winters provides one of the clearest frameworks for how to organize a growth tea
 |----------|------|-----------|
 | Growth PM | Growth roadmap, loop optimization, experimentation | VP Product or Head of Growth |
 | Growth Engineering | Implementation, A/B test infrastructure | Engineering (dotted line to Growth PM) |
-| Growth Design | Onboarding flows, conversion optimization | Design (dotted line to Growth PM) |
+| Growth Design | [[onboarding|Onboarding]] flows, conversion optimization | Design (dotted line to Growth PM) |
 | Growth Marketing | Paid acquisition, lifecycle marketing | Marketing |
 | Analytics | Metric tracking, cohort analysis, experimentation analysis | Analytics or Data Science |
 

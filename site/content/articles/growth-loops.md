@@ -126,7 +126,7 @@ Small improvements in any of these levers compound over time because the loop is
 1. **Optimizing the funnel when the loop is broken.** If your primary growth loop is not cycling, no amount of funnel optimization will create compounding growth. Fix the loop first.
 2. **Confusing channels with loops.** "SEO" is a channel. "Users create content → content ranks in search → new users discover and create more content" is a loop. The loop includes the channel but is not the channel.
 3. **Treating all acquisition equally.** Users from viral loops typically have better retention than users from paid acquisition because they were introduced by someone who already found value. Source quality matters.
-4. **Ignoring retention in the loop equation.** A loop where acquired users churn quickly produces outputs that diminish each cycle. Retention is not separate from growth — it is the variable that determines whether the loop compounds or decays.
+4. **Ignoring retention in the loop equation.** A loop where acquired users churn quickly produces outputs that diminish each cycle. [[retention|Retention]] is not separate from growth — it is the variable that determines whether the loop compounds or decays.
 
 ## Key Takeaway
 

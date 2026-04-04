@@ -83,7 +83,7 @@ Most startups spend 1-3 years in this phase. The goal is to find *any* group of 
 - Ship weekly. Speed of iteration is the competitive advantage.
 - Kill features that are not contributing to retention. Simplify.
 - Do not scale anything. Scaling pre-PMF amplifies waste.
-- Measure [[retention|retention]], not sign-ups. Retention is the only honest metric.
+- Measure [[retention|retention]], not sign-ups. [[retention|Retention]] is the only honest metric.
 
 [[sean-ellis|Ellis]] adds a critical nuance: "Just ignore the people who say they'd be somewhat disappointed. They're telling you it's a nice to have. If you start paying attention to what your somewhat disappointed users are telling you and then you start tweaking onboarding and product based on their feedback, maybe you're going to dilute it for your must-have users."
 

@@ -75,7 +75,7 @@ A common source of confusion: how do OKRs relate to the [[north-star-metric|Nort
 
 | Framework | Purpose | Time Horizon | Changes Often? |
 |-----------|---------|-------------|----------------|
-| North Star Metric | Strategic alignment for the entire company | Ongoing (months to years) | Rarely |
+| [[north-star-metric|North Star Metric]] | Strategic alignment for the entire company | Ongoing (months to years) | Rarely |
 | OKRs | Quarterly focus for teams | 90 days | Every quarter |
 | KPIs | Ongoing health monitoring | Always on | When the business model changes |
 | Sprint goals | Tactical weekly/bi-weekly focus | 1-2 weeks | Every sprint |

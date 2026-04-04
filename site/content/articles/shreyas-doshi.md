@@ -62,7 +62,7 @@ Shreyas is emphatic that PMs should be measured on outcomes (metrics that change
 
 > "The best PMs are not the ones who ship the most features. They are the ones who make the fewest decisions — but the right ones."
 
-> "If your OKRs are a list of things to ship, they are not OKRs. They are a task list with corporate formatting."
+> "If your [[okrs|OKRs]] are a list of things to ship, they are not OKRs. They are a task list with corporate formatting."
 
 ## Key Takeaway
 

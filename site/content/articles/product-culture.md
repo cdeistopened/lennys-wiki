@@ -106,7 +106,7 @@ The biggest obstacle is not the team -- it is the stakeholders who lose their di
 ## Related
 
 - [[hiring-pms|Hiring PMs]] -- The kind of PM you hire should match the culture you are building
-- [[okrs|OKRs]] -- Outcome-based OKRs are a precondition for empowered teams
+- [[okrs|OKRs]] -- Outcome-based [[okrs|OKRs]] are a precondition for empowered teams
 - [[one-on-ones|One-on-Ones]] -- Where cultural problems surface first
 - [[ic-vs-management|IC vs Management Track]] -- Culture determines whether senior ICs can have real impact
 

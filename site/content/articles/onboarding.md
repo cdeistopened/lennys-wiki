@@ -119,7 +119,7 @@ Ask one or two questions at sign-up that route users to different onboarding flo
 | Sign-up to activation rate | % of new users who reach the aha moment | 25-40% (B2B SaaS) |
 | Time to activate | Median time from sign-up to activation event | As low as possible |
 | Onboarding completion rate | % of users who complete the guided onboarding flow | 60-80% |
-| D1 / D7 / D30 retention by activation status | Retention difference between activated and non-activated users | Activated users should retain 2-3x higher |
+| D1 / D7 / D30 retention by activation status | [[retention|Retention]] difference between activated and non-activated users | Activated users should retain 2-3x higher |
 | Drop-off by step | Where in the onboarding flow users abandon | Identify and fix the worst drop-off points |
 
 The most important diagnostic: compare retention curves for users who activated vs. users who signed up but did not activate. If the gap is large (it usually is), improving the activation rate has an outsized impact on total retention.

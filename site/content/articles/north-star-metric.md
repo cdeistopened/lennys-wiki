@@ -109,7 +109,7 @@ The NSM is not permanent. As the product and market evolve, the metric that best
 | Stage | Appropriate NSM Focus |
 |-------|----------------------|
 | Pre-PMF | Activation rate (are users finding value?) |
-| Early growth | Retention rate (are they coming back?) |
+| Early growth | [[retention|Retention]] rate (are they coming back?) |
 | Scaling | Engagement depth (are they using more of the product?) |
 | Maturity | Net revenue retention (are they expanding?) |
 
@@ -125,7 +125,7 @@ The NSM is not permanent. As the product and market evolve, the metric that best
 
 ## Related
 
-- [[okrs|OKRs]] — OKRs operationalize the NSM into quarterly goals
+- [[okrs|OKRs]] — [[okrs|OKRs]] operationalize the NSM into quarterly goals
 - [[activation-rate|Activation Rate]] — A key input metric in most NSM trees
 - [[retention|Retention]] — The most common leading indicator of a healthy NSM
 - [[ab-testing|A/B Testing]] — The method for validating whether changes actually move the NSM

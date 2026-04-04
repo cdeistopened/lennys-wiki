@@ -94,7 +94,7 @@ Every PM eventually faces this: the CEO, a VP of Sales, or a board member has an
 
 **Step 4: Propose alternatives.** Can the need be met with a smaller investment? A different approach? A time-boxed experiment? Offer options at different levels of effort.
 
-[[matt-lemay|Matt LeMay]] adds a complementary principle: even when you follow every best practice, "if your company goes out of business, they're not going to keep writing your paycheck for two years because all of your OKRs were a 0.6 or a 0.7." The roadmap must connect to business-critical outcomes, not just internal consensus about process correctness.
+[[matt-lemay|Matt LeMay]] adds a complementary principle: even when you follow every best practice, "if your company goes out of business, they're not going to keep writing your paycheck for two years because all of your [[okrs|OKRs]] were a 0.6 or a 0.7." The roadmap must connect to business-critical outcomes, not just internal consensus about process correctness.
 
 ## Balancing Tech Debt vs. Features
 

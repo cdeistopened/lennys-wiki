@@ -148,6 +148,6 @@ Activation rates often vary significantly by segment, and analyzing these differ
 
 - [[hila-qu|Hila Qu on PLG motion]] — Aha moment definition, GitLab activation metric (2 users / 2 features / 14 days), PLG funnel audit
 - [[lauryn-isford|Lauryn Isford on mastering onboarding]] — Activation rate calibration, lower-is-better paradox, Airtable onboarding rebuild
-- [[bangaly-kaba|Bangaly Kaba on growth frameworks]] — Onboarding-to-habit gap, aha moment identification, understand work
+- [[bangaly-kaba|Bangaly Kaba on growth frameworks]] — [[onboarding|Onboarding]]-to-habit gap, aha moment identification, understand work
 - [[oji-udezue|Oji Udezue on virality and product frameworks]] — Three activation thresholds at Calendly and Typeform, zone of benefit
 - [[ben-williams|Ben Williams on Snyk PLG]] — Setup moments, aha moments, habit moments as activation progression

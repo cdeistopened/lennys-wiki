@@ -52,7 +52,7 @@ The actionable insight: focus on winning one atomic network completely before ex
 
 | Signal | What It Means | How to Measure |
 |--------|---------------|----------------|
-| Retention improves with network size | Users in larger networks stay longer | Cohort analysis by network size |
+| [[retention|Retention]] improves with network size | Users in larger networks stay longer | Cohort analysis by network size |
 | Organic acquisition percentage grows | Less paid spend needed per user over time | % organic vs paid acquisition |
 | Value delivered increases with usage | Power users get exponentially more value | Engagement metrics by user tenure |
 | Switching costs compound | Users accumulate investment that is hard to move | Data, connections, content locked in |

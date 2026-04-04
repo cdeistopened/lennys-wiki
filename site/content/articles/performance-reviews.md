@@ -116,7 +116,7 @@ PIPs are difficult for everyone involved. [[kim-scott|Kim Scott]] places this sq
 ## Related
 
 - [[one-on-ones|One-on-Ones]] -- Where feedback should be delivered continuously, not saved for reviews
-- [[okrs|OKRs]] -- Keep OKRs separate from performance evaluation to avoid sandbagging
+- [[okrs|OKRs]] -- Keep [[okrs|OKRs]] separate from performance evaluation to avoid sandbagging
 - [[hiring-pms|Hiring PMs]] -- The review rubric should align with what you screen for in hiring
 - [[ic-vs-management|IC vs Management Track]] -- Review criteria differ significantly between tracks
 

@@ -17,7 +17,7 @@ You are trying to figure out whether your product's advantage is durable or temp
 
 | Power | Definition | When It Emerges | Tech Example |
 |-------|-----------|-----------------|--------------|
-| **Network Effects** | Product value increases with each additional user | After critical mass achieved | WhatsApp, LinkedIn |
+| **[[network-effects|Network Effects]]** | Product value increases with each additional user | After critical mass achieved | WhatsApp, LinkedIn |
 | **Switching Costs** | Users face friction leaving for a competitor | After integration and data accumulation | Salesforce, Workday |
 | **Counter-Positioning** | New entrant adopts a model the incumbent cannot copy without cannibalizing itself | At founding | Netflix vs Blockbuster, Tesla vs legacy auto |
 | **Scale Economies** | Unit cost declines with volume in ways competitors cannot match | At scale | AWS, Google Search infrastructure |
